@@ -23,30 +23,28 @@ class Song < ClipMixins
   attr_accessor :beats_per_minute
 end
 
+class Photo
+  include AcceptComments
+  def initialize
+    @format = "JPEG"
+  end
+  def show
+    puts "Displaying #{object_id}"
+  end
+end
+
 
 video = Video.new
 video.add_comment("Cool slow motion effect!")
 video.add_comment("Weird ending")
 song = Song.new
 song.add_comment("Awesome beat.")
+photo = Photo.new
+photo.add_comment("Beautiful colors.")
 
-p video.comments, song.comments
+p video.comments, song.comments, photo.comments
 
 
 video.play
 song.play
-
-class Photo
-  include AcceptComments
-  def show
-    puts "Displaying #{object_id}"
-  end
-end
-
-photo = Photo.new
-photo.add_comment("Beautiful colors.")
-
-p photo.comments
-
-
 photo.show
