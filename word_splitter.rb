@@ -24,6 +24,36 @@ p splitter.count
 p splitter.first
 p splitter.sort
 
+p splitter.all?
+p splitter.chunk
+p splitter.collect
+p splitter.collect_concat
+p splitter.count
+p splitter.cycle
+p splitter.detect("d")
+# p splitter.drop("d")
+p splitter.drop_while
+p splitter.each_cons(1)
+p splitter.each_entry
+p splitter.each_slice(2)
+p splitter.each_with_index
+p splitter.each_with_object(3)
+p splitter.entries
+p splitter.find("do")
+p splitter.find_index(1)
+
+p splitter.flat_map
+p splitter.grep(1)
+p splitter.group_by
+p splitter.inject
+p splitter.lazy
+p splitter.reverse_each
+
+p splitter.take(nil?)
+p splitter.zip
+
+
+
 
 
 
