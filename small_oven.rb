@@ -34,6 +34,7 @@ oven = SmallOven.new
 oven.turn_off
 dinner.each do |item|
   begin
+  oven.turn_on
   oven.contents = item
   puts "Serving #{oven.bake}."
   rescue OvenEmptyError => error
@@ -43,3 +44,14 @@ dinner.each do |item|
     retry
   end
 end
+
+# ---------------------- ENSURE -------------------------------
+#
+# begin oven.turn_on
+# oven.contents = "turkey"
+# puts "Serving #{oven.bake}"
+# rescue OvenEmptyError => error
+# puts "Error: #{error.message}"
+# ensure
+# oven.turn_off
+# end
