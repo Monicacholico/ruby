@@ -20,19 +20,24 @@
             background-color: lightgrey;
         }
         .nav-bar {
-            float: right;
+            /*float: right;*/
             list-style: none;
-            display: inline;
-            margin: 20px;
+            margin: 10px;
         }
         section {
             width: 80%;
             height: auto;
             margin: auto;
+            border-radius: 5px;
+            background-color: lightgrey;
+          box-shadow: #262626;
+          -webkit-box-shadow: 5px 6px 10px 2px #0F0F0F;
+          box-shadow: 5px 6px 10px 1px #0F0F0F;
+          opacity: .7;
         }
 
         a:link {
-            margin: 50px;
+            margin: 30px;
             font-size: large;
             font-weight: bold;
             text-decoration: none;
@@ -40,8 +45,9 @@
             size: 2em;
             cursor: pointer;
         }
-
-
+        a:visited {
+          color: #0F0F0F;
+        }
 
     </style>
 </head>
@@ -49,9 +55,12 @@
 <section>
     <h1>My Movies</h1>
     <ul>
-        <li class="nav-bar">movies</li>
-        <li class="nav-bar">go</li>
-        <li class="nav-bar">here</li>
+      <h2>Movies</h2>
+      <% @movies.each do |movie| %>
+        <li class="nav-bar">
+         <a href="/movies/<%= movie.id %>"><%= movie.title %></a>
+        </li>
+      <% end %>
     </ul>
     <a href="/movies/new">Add New Movie</a>
 </section>

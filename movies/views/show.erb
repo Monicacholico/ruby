@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <title>My Movies <%= @movie.title %></title>
+  <style>
+    body{
+      background-color: lightcoral;
+      opacity: .8%;
+    }
+    h1 {
+      text-align: center;
+      border-radius: 5px;
+      font-family: Chalkboard;
+      font-size: xx-large;
+      box-shadow: #262626;
+      -webkit-box-shadow: 5px 6px 10px 2px #0F0F0F;
+      box-shadow: 5px 6px 10px 1px #0F0F0F;
+      opacity: .7;
+      background-color: lightgrey;
+    }
+    .nav-bar {
+      /*float: right;*/
+      list-style: none;
+      margin: 10px;
+    }
+    section {
+      width: 80%;
+      height: auto;
+      margin: auto;
+      border-radius: 5px;
+      background-color: lightgrey;
+      box-shadow: #262626;
+      -webkit-box-shadow: 5px 6px 10px 2px #0F0F0F;
+      box-shadow: 5px 6px 10px 1px #0F0F0F;
+      opacity: .7;
+    }
+
+    a{
+      margin: 20px;
+    }
+
+    a:link {
+      margin: 30px;
+      font-size: large;
+      font-weight: bold;
+      text-decoration: none;
+      color: #262626;
+      size: 2em;
+      cursor: pointer;
+    }
+      a:visited {
+        color: #0F0F0F;
+      }
+  </style>
+</head>
+<body>
+<section>
+  <h1><%= @movie.title %></h1>
+  <table>
+    <tr>
+      <td><strong>Title:</strong></td>
+      <td><%= @movie.title %></td>
+    </tr>
+    <tr>
+      <td><strong>Director:</strong></td>
+      <td><%= @movie.director %></td>
+    </tr>
+    <tr>
+      <td><strong>Year:</strong></td>
+      <td><%= @movie.year %></td>
+    </tr>
+  </table>
+  <a href="/movies">Back to Index</a>
+</section>
+</body>
+</html>

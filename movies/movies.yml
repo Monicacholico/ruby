@@ -1,0 +1,21 @@
+---
+1: !ruby/object:Movie
+  title: Forrest Gump
+  director: Robert Zemeckis
+  year: '1994'
+  id: 1
+2: !ruby/object:Movie
+  title: Godfellas
+  director: Martin Scorsese
+  year: '1990'
+  id: 2
+3: !ruby/object:Movie
+  title: Star Wars
+  director: George Lucas
+  year: '1977'
+  id: 3
+4: !ruby/object:Movie
+  title: Finding Nemo
+  director: Disney
+  year: '2006'
+  id: 4
