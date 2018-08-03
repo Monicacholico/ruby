@@ -6,7 +6,12 @@ class PointeShoes
     puts"Your level is #{@level} and you have a foot type of #{feet}"
   end
 
+  def level_models
+
+  end
+
 end
 
-
-report_fitting
+Capezio = PointeShoes.new
+pointeshoes.level = "beginner"
+pointeshoes.feet = "giselle"
